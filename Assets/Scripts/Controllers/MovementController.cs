@@ -3,40 +3,32 @@ using UnityEngine.UI;
 
 public class MovementController : MonoBehaviour
 {
-    [SerializeField]
-    [Range(0, 10)]
-    private float movementSpeed = 0;
+    [SerializeField] [Range(0, 10)] float movementSpeed = 0;
+    [SerializeField] Text distanceText;
+    [SerializeField] PlayerStatsController playerStatsController;
 
-    [SerializeField]
-    private Text distance;
+    Rigidbody2D rb;
+    Vector2 initialPos;
+    int distanceTravelled;
 
-    [SerializeField]
-    private PlayerStatsController playerStatsController;
-
-    private Rigidbody2D rb;
-
-    private Vector2 initialPos;
-
-    private int distanceTravelled;
-
-	private void Start ()
+	void Start ()
     {
         rb = GetComponent<Rigidbody2D>();
         initialPos = rb.position;
     }
 	
-	private void Update ()
+	void Update ()
     {
         Run();
     }
 
-    private void Run()
+    void Run()
     {
         Vector2 _position = transform.position;
         _position.x += Time.deltaTime * movementSpeed;
         transform.position = _position;
         distanceTravelled = (int)Vector2.Distance(initialPos, rb.position);
         playerStatsController.pd.maxDistance = distanceTravelled;
-        distance.text = distanceTravelled.ToString();
+        distanceText.text = distanceTravelled.ToString();
     }
 }

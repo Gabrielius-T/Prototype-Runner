@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a64e5b0e436d4bed9780211ae245f7b, type: 3}
+  m_Name: Centaur_evade_Data
+  m_EditorClassIdentifier: 
+  dataName: Centaur_evade
+  dragonBonesJSON: {fileID: 4900000, guid: be042340389f72149b5cc54bd9475675, type: 3}
+  textureAtlas:
+  - textureAtlasJSON: {fileID: 4900000, guid: 3a39e34f39efa18468ff45b8062108dc, type: 3}
+    texture: {fileID: 2800000, guid: 44d89c1ae550d634fa4ce03f63a66e0e, type: 3}
+    material: {fileID: 2100000, guid: f8bc15765398bbf4c94522774259ee94, type: 2}
+    uiMaterial: {fileID: 0}

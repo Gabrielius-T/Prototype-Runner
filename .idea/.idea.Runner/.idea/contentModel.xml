@@ -1,9 +1,7 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\Gabrielius\.Rider2019.2\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\Gabrielius\.Rider2019.2\system\resharper-host\local\Transient\ReSharperHost\v192\SolutionCaches\_Runner.-2032850713.00" t="ExcludeRecursive" />
-    <e p="C:\Users\Gabrielius\Desktop\Unity\Runner" t="IncludeRecursive">
+    <e p="C:\Darbas\Other Prototypes\Runner" t="IncludeRecursive">
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
@@ -94,14 +92,27 @@
             </e>
           </e>
         </e>
+        <e p="LeanTween" t="Include">
+          <e p="Editor" t="Include">
+            <e p="LeanTweenDocumentationEditor.cs" t="Include" />
+          </e>
+          <e p="Framework" t="Include">
+            <e p="LeanAudio.cs" t="Include" />
+            <e p="LeanSmooth.cs" t="Include" />
+            <e p="LeanTest.cs" t="Include" />
+            <e p="LeanTween.cs" t="Include" />
+            <e p="LeanTweenExt.cs" t="Include" />
+            <e p="LTDescr.cs" t="Include" />
+            <e p="LTDescrOptional.cs" t="Include" />
+            <e p="LTSeq.cs" t="Include" />
+          </e>
+        </e>
         <e p="Scripts" t="Include">
-          <e p="Animating" t="Include">
+          <e p="Animations" t="Include">
+            <e p="CameraShaker.cs" t="Include" />
             <e p="ObjectFollower.cs" t="Include" />
-            <e p="ParticleSystemAutoDestroy.cs" t="Include" />
-            <e p="RotateAroundAxis.cs" t="Include" />
-            <e p="ScrollingBackground" t="Include">
-              <e p="ScrollingBackground.cs" t="Include" />
-            </e>
+            <e p="ScrollingBackground.cs" t="Include" />
+            <e p="TweenAnimator.cs" t="Include" />
           </e>
           <e p="Collectables" t="Include">
             <e p="CoinRotation.cs" t="Include" />
@@ -109,36 +120,17 @@
             <e p="LifeCollectable.cs" t="Include" />
           </e>
           <e p="Controllers" t="Include">
-            <e p="ActionsController.cs" t="Include" />
             <e p="AnimationController.cs" t="Include" />
             <e p="GameStateController.cs" t="Include" />
             <e p="MovementController.cs" t="Include" />
             <e p="PlayerStatsController.cs" t="Include" />
           </e>
-          <e p="Data" t="Include">
-            <e p="DataManager.cs" t="Include" />
-            <e p="PlayerData" t="Include">
-              <e p="PlayerData.cs" t="Include" />
-            </e>
-            <e p="VehicleData" t="Include">
-              <e p="VehicleParts.cs" t="Include" />
-              <e p="VehicleStats.cs" t="Include" />
-            </e>
+          <e p="DestroyAfterCollision.cs" t="Include" />
+          <e p="Editor" t="Include">
+            <e p="TweenAnimatorEditor.cs" t="Include" />
           </e>
-          <e p="Misc" t="Include">
-            <e p="DestroyAfterCollision.cs" t="Include" />
-            <e p="DontDestroy.cs" t="Include" />
-          </e>
-          <e p="Obstacles" t="Include">
-            <e p="ObstacleCollision.cs" t="Include" />
-          </e>
-          <e p="SceneManagement" t="Include">
-            <e p="GlobalSceneVariables.cs" t="Include" />
-            <e p="ScenesManagement.cs" t="Include" />
-          </e>
-          <e p="UI" t="Include">
-            <e p="CameraShaker.cs" t="Include" />
-          </e>
+          <e p="PlayerData.cs" t="Include" />
+          <e p="ScenesManagement.cs" t="Include" />
         </e>
       </e>
       <e p="obj" t="ExcludeRecursive" />
@@ -146,5 +138,7 @@
       <e p="Runner.sln" t="IncludeFlat" />
       <e p="Temp\bin" t="ExcludeRecursive" />
     </e>
+    <e p="C:\Users\Gabri\.Rider2019.2\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Gabri\.Rider2019.2\system\resharper-host\local\Transient\ReSharperHost\v192\SolutionCaches\_Runner.-1471948813.00" t="ExcludeRecursive" />
   </component>
 </project>
