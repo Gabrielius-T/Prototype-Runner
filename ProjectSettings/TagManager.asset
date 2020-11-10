@@ -19,9 +19,9 @@ TagManager:
   - AI
   - Bridge
   - Collectables
-  - Obstacles
-  - 
-  - 
+  - ObstaclesHit
+  - Ground
+  - ObstaclesGround
   - 
   - 
   - 
