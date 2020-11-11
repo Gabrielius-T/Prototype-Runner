@@ -67,7 +67,7 @@ public class MovementController : MonoSingleton<MovementController>
     void OnCollisionEnter2D(Collision2D _other)
     {
         int _layer = _other.gameObject.layer;
-        if (_layer == 13)
+        if (_layer == 13 && rb.velocity.y <= 0f)
         {
             jumpsCount = 0;
         }
