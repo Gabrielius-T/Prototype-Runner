@@ -13,15 +13,15 @@ TagManager:
   - UI
   - 
   - 
-  - Map
-  - Vehicle
-  - Sky
-  - AI
-  - Bridge
+  - Character
   - Collectables
-  - ObstaclesHit
   - Ground
   - ObstaclesGround
+  - ObstaclesHit
+  - Platform
+  - 
+  - 
+  - 
   - 
   - 
   - 

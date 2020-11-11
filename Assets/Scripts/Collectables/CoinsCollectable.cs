@@ -6,18 +6,18 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D))]
 public class CoinsCollectable : MonoBehaviour
 {
-    [SerializeField]
-    private PlayerStatsController playerStatsController;
+    [SerializeField] int coinsAmount;
 
-    [SerializeField]
-    private int coinsAmount;
-
-    [SerializeField]
-    private AudioSource pickupSound;
-
-    private void OnTriggerEnter2D(Collider2D collision)
+    AudioSource pickupSound;
+    
+    void Start()
     {
-        playerStatsController.AddMoney(coinsAmount);
+        pickupSound = GetComponent<AudioSource>();
+    }
+    
+    void OnTriggerEnter2D(Collider2D _collision)
+    {
+        PlayerStatsController.instance.AddMoney(coinsAmount);
         pickupSound.Play();
         Destroy(gameObject);
     }

@@ -2,16 +2,15 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class MovementController : MonoBehaviour
+public class MovementController : MonoSingleton<MovementController>
 {
     [SerializeField] [Range(0, 10)] float movementSpeed = 0;
     [SerializeField] Text distanceText;
-    [SerializeField] PlayerStatsController playerStatsController;
     [SerializeField] float jumpForce;
 
+    internal Rigidbody2D rb;
     const float delayAfterInput = 0.1f;
     Transform cTransform;
-    Rigidbody2D rb;
     Vector2 initialPos;
     int distanceTravelled;
     int jumpsCount;
@@ -61,14 +60,14 @@ public class MovementController : MonoBehaviour
         _position.y = Mathf.Max(startingY, _position.y);
         cTransform.position = _position;
         distanceTravelled = (int)Vector2.Distance(initialPos, rb.position);
-        playerStatsController.pd.maxDistance = distanceTravelled;
+        PlayerStatsController.instance.pd.maxDistance = distanceTravelled;
         distanceText.text = distanceTravelled.ToString();
     }
 
     void OnCollisionEnter2D(Collision2D _other)
     {
         int _layer = _other.gameObject.layer;
-        if (_layer == 16)
+        if (_layer == 13)
         {
             jumpsCount = 0;
         }

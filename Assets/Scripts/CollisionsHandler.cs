@@ -7,13 +7,14 @@ public class CollisionsHandler : MonoBehaviour
 {
     [SerializeField] float blinkInterval = 0.1f;
     
+    const float timeToWaitAfterSafe = 0.2f;
     SpriteRenderer sr;
     Collider2D col;
-
     List<Collider2D> activeTriggers = new List<Collider2D>();
     bool obstaclesOff;
     bool safeToEnableColliders;
     float passedTimeSinceBlink;
+    float passedTimeSinceSafe;
     int totalContacts;
 
     void Start()
@@ -24,7 +25,19 @@ public class CollisionsHandler : MonoBehaviour
 
     void Update()
     {
-        safeToEnableColliders = activeTriggers.Count == 0;
+        if (activeTriggers.Count == 0)
+        {
+            passedTimeSinceSafe += Time.deltaTime;
+            if (passedTimeSinceSafe >= timeToWaitAfterSafe)
+            {
+                safeToEnableColliders = true;
+            }
+        }
+        else
+        {
+            passedTimeSinceSafe = 0f;
+            safeToEnableColliders = false;
+        }
         if (obstaclesOff)
         {
             passedTimeSinceBlink += Time.deltaTime;
@@ -47,11 +60,12 @@ public class CollisionsHandler : MonoBehaviour
     
     void OnTriggerEnter2D(Collider2D _other)
     {
-        if (_other.gameObject.layer == 14)
+        if (_other.gameObject.layer == 12 && safeToEnableColliders)
         {
+            PlayerStatsController.instance.RemoveLife();
             StartCoroutine(DisableObstaclesFor(2f));
         }
-        else if (_other.gameObject.layer == 16 && !activeTriggers.Contains(_other))
+        else if (_other.gameObject.layer == 11 && !activeTriggers.Contains(_other))
         {
             activeTriggers.Add(_other);
         }
@@ -59,7 +73,7 @@ public class CollisionsHandler : MonoBehaviour
 
     void OnTriggerExit2D(Collider2D _other)
     {
-        if (_other.gameObject.layer == 16)
+        if (_other.gameObject.layer == 11)
         {
             activeTriggers.Remove(_other);
         }

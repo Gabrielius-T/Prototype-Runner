@@ -110,11 +110,10 @@
         </e>
         <e p="Obstacle.cs" t="Include" />
         <e p="ObstaclesController.cs" t="Include" />
+        <e p="Platform.cs" t="Include" />
         <e p="Scripts" t="Include">
           <e p="Animations" t="Include">
-            <e p="CameraShaker.cs" t="Include" />
             <e p="ObjectFollower.cs" t="Include" />
-            <e p="ScrollingBackground.cs" t="Include" />
             <e p="TweenAnimator.cs" t="Include" />
           </e>
           <e p="Collectables" t="Include">
@@ -134,6 +133,7 @@
           <e p="MonoSingleton.cs" t="Include" />
           <e p="PlayerData.cs" t="Include" />
           <e p="ScenesManagement.cs" t="Include" />
+          <e p="ScrollingBackground.cs" t="Include" />
         </e>
       </e>
       <e p="obj" t="ExcludeRecursive" />

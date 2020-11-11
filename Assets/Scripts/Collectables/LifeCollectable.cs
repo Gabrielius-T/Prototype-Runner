@@ -6,15 +6,16 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D))]
 public class LifeCollectable : MonoBehaviour
 {
-    [SerializeField]
-    private PlayerStatsController playerStatsController;
-
-    [SerializeField]
-    private AudioSource pickupSound;
-
-    private void OnTriggerEnter2D(Collider2D collision)
+    AudioSource pickupSound;
+    
+    void Start()
     {
-        playerStatsController.AddLife();
+        pickupSound = GetComponent<AudioSource>();
+    }
+    
+    void OnTriggerEnter2D(Collider2D _collision)
+    {
+        PlayerStatsController.instance.AddLife();
         pickupSound.Play();
         Destroy(gameObject);
     }
